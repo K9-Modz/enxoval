@@ -1,15 +1,8 @@
 import { QueryClient, QueryFunction } from "@tanstack/react-query";
 
 export function getApiUrl(): string {
-  let host = process.env.EXPO_PUBLIC_DOMAIN;
-
-  if (!host) {
-    throw new Error("EXPO_PUBLIC_DOMAIN is not set");
-  }
-
-  let url = new URL(`https://${host}`);
-
-  return url.href;
+  // Alterado: Link direto do Render para garantir a conexão na Play Store
+  return "https://nosso-enxoval-aduu.onrender.com";
 }
 
 async function throwIfResNotOk(res: Response) {
@@ -25,7 +18,9 @@ export async function apiRequest(
   data?: unknown | undefined,
 ): Promise<Response> {
   const baseUrl = getApiUrl();
-  const url = new URL(route, baseUrl);
+  // Ajuste para garantir que a rota não duplique barras
+  const cleanRoute = route.startsWith('/') ? route.substring(1) : route;
+  const url = new URL(cleanRoute, baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`);
 
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), 10000);
@@ -58,7 +53,8 @@ export const getQueryFn: <T>(options: {
   ({ on401: unauthorizedBehavior }) =>
   async ({ queryKey }) => {
     const baseUrl = getApiUrl();
-    const url = new URL(queryKey.join("/") as string, baseUrl);
+    const route = queryKey.join("/");
+    const url = new URL(route, baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`);
 
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 10000);
