@@ -1,0 +1,128 @@
+You are a senior mobile app designer, UX/UI specialist, and full-stack developer with experience in React Native and Expo.
+
+Your task is to create a COMPLETE and MODERN mobile application for a couple who is getting married and organizing their new home essentials, with guest and family participation.
+
+This app is a “Wedding Home Essentials & Gift Checklist” application.
+
+LANGUAGE REQUIREMENT:
+- All app content MUST be written in Brazilian Portuguese (pt-BR).
+
+USER ROLES:
+1) Couple (Noivos)
+- Full control over the checklist.
+- Can mark items as purchased.
+- Can add, edit, or remove items.
+- Can see who gifted each item.
+
+2) Guests / Family (Parentes e Convidados)
+- Can view the list.
+- Can choose an item to gift.
+- Can mark an item as “Vou presentear”.
+- Cannot edit or delete items.
+
+MAIN GOALS:
+- Avoid duplicate gifts.
+- Make it easy for guests to choose presents.
+- Keep everything organized and transparent.
+- Simple and emotional experience.
+
+PLATFORM:
+- Mobile-first app.
+- Android and iOS ready.
+- Built with React Native (Expo preferred).
+
+APP STRUCTURE (SCREENS):
+
+1) Welcome / Home Screen
+- App name (ex: “Nosso Enxoval”).
+- Two buttons:
+  - “Sou os Noivos”
+  - “Sou Convidado”
+
+2) Couple Area (Noivos)
+- Login (simple authentication).
+- Full checklist access.
+- Overall progress bar.
+- Manage rooms and items.
+- View gifted items with guest names.
+
+3) Guest Area (Convidados)
+- Access via link or code.
+- View checklist by room.
+- See item status:
+  - Disponível
+  - Reservado
+  - Já presenteado
+- Button: “Vou presentear este item”.
+
+ROOMS / TABS:
+- Cozinha
+- Sala
+- Quarto
+- Banheiro
+- Lavanderia
+- Escritório
+- Área Externa
+
+Each room must contain a detailed list of items, such as:
+
+COZINHA:
+- Geladeira
+- Fogão
+- Micro-ondas
+- Air fryer
+- Liquidificador
+- Jogo de panelas
+- Pratos
+- Copos
+- Talheres
+
+SALA:
+- Sofá
+- Televisão
+- Rack
+- Tapete
+- Cortinas
+
+QUARTO:
+- Cama
+- Colchão
+- Guarda-roupa
+- Lençóis
+- Travesseiros
+
+BANHEIRO:
+- Toalhas
+- Tapete
+- Porta-sabonete
+- Lixeira
+
+ITEM STATUS LOGIC:
+- Available (Disponível)
+- Reserved by guest (Reservado)
+- Purchased (Presenteado)
+
+DESIGN & UX:
+- Elegant, emotional, and welcoming design.
+- Wedding/home aesthetic.
+- Clear icons and colors:
+  - Verde: Presenteado
+  - Amarelo: Reservado
+  - Cinza: Disponível
+- Smooth animations.
+- Very easy for older family members to use.
+
+TECHNICAL REQUIREMENTS:
+- Real-time or near real-time updates.
+- State management.
+- Prepared for backend integration (Firebase or similar).
+- Secure access control for roles.
+
+EXTRA FEATURES (OPTIONAL):
+- Guest name and message with gift.
+- Thank-you message after gifting.
+- Shareable invitation link.
+- Notifications when an item is gifted.
+
+FINAL OBJECTIVE:
+Create a beautiful, intuitive, and emotional app that helps a couple organize their new home while allowing family and friends to participate in a simple and joyful way.
