@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "nossoenxoval",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
@@ -15,10 +15,11 @@
     },
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.myapp"
+      "bundleIdentifier": "com.jcoliveira.nossoenxoval"
     },
     "android": {
-      "package": "com.myapp",
+      "package": "com.jcoliveira.nossoenxoval",
+      "versionCode": 3,
       "adaptiveIcon": {
         "backgroundColor": "#FFF8F5",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -33,7 +34,7 @@
       [
         "expo-router",
         {
-          "origin": "https://replit.com/"
+          "origin": "https://nossoenxoval.com"
         }
       ],
       "expo-font",
@@ -42,6 +43,11 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e14460f9-44ec-4db3-8f4a-9b5761d14401"
+      }
     }
   }
 }
